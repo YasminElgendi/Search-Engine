@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Static/styleCart.css">
+        <title>Jessie's Book Store</title>
+    </head>
+    <body>
+        <header>
+            <div id="up">
+                <a id = "Sitename" href="Home.html"><img id ="logo" src="Static/Logo.png" alt="Website Logo"></a>
+                <a id = "Sitename" href="Home.html"><h1> Jessie's Book Store</h1></a>
+            </div>
+            
+            <nav class = "navbar">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="myCart.html">My Cart</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header> 
+        <main>
+            
+            <h2>My Cart</h2>
+            <span>
+            {% for book in cart %}
+                    <section>
+                        <picture>
+                            <img src='{{book["image_url"]}}' alt="{{book['name']}} Book cover">
+                        </picture>
+                        <p>{{book["book_name"]}}</p>
+                        <p>{{total_cost}}</p>
+                        <h4>{{book["book_cost"]}}L.E</h4>
+                    </section>
+            
+            {% endfor%}
+            </span>
+            <h5>Total cost = {{total_cost}} L.E</h5>
+            <article>
+            <a href=".">
+                <input type = "button" class = "button" value ="Checkout">
+            </a>
+            </article>
+        </main>
+    </body>
+</html>
