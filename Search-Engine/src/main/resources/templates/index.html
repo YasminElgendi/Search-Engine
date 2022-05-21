@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+	<head>
+		<link rel="icon" type="image/x-icon" href="icon.png">
+		<meta charset="UTF-8">
+		<!-- This is to ensure the mobile version for proper rendering and touch zooming-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="Static/styles.css">
+
+
+		<title>Jessies Search Engine</title>
+
+</head>
+<body>
+<div class = "search-name">
+
+	<a style="color: aliceblue" href="http://localhost:8080/" >Engezny</a>
+</div>
+	<form action="SearchWordRequest" method="post">
+		<table>
+			<tr>
+
+				<td><button id = "btn" class="btn-search"></button></td>
+				<td><input type="text" name ="name" class="input-search" placeholder=" Type to Search..."></td>
+			</tr>
+
+			<tr>
+
+				<td><input id="inp" type = "submit" class="btn-submit"></input></td>
+			</tr>
+
+			<script>
+				document.getElementById("btn").onclick = function() { document.getElementById("inp").style.display = "block";
+					document.getElementById("btn").style.display = "none"}
+			</script>
+		</table>
+	</form>
+</body>
+</html>
