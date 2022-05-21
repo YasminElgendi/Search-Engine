@@ -1,7 +1,7 @@
 A crawler based search engine implemented using java and spring framework for the web interface
 
 Notes:
-For this project to run mongodb should be installed ans setup
+For this project to run mongodb should be installed and setup
 
 HOW TO RUN THE APPLICATION:
 -> Open preferred IDE fo java
