@@ -4,6 +4,7 @@ public class Page
 {
 	private String name;
 	private String url;
+	private String content;
 
 	public String getName()
 	{
@@ -23,6 +24,16 @@ public class Page
 	public void setURL(String URL)
 	{
 		this.url = URL;
+	}
+	
+		public String getContent()
+	{
+		return content;
+	}
+	
+	public void setContent(String Content)
+	{
+		this.content = Content;
 	}
 
 
