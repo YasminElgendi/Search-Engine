@@ -7,6 +7,7 @@
     <style>
         body{
             background-color: black;
+            background-image: url(../images/backsearch.jpg);
         }
         header{
             width:100%;
@@ -57,7 +58,7 @@
 
         .input-search::placeholder{
             color:rgba(0, 0, 0, 0.5);
-            font-size: 10x;
+            font-size: 10px;
             letter-spacing: 2px;
             font-weight: 90;
             font-family: merriweather,Garamond, serif !important;
@@ -80,16 +81,23 @@
             cursor: pointer;
             border-radius: 50%;
             position: absolute;
+            top:30px;
             right: 0px;
             background-size:115%;
             background-position: center;
             color:transparent ;
-            background-color:white;
+            background-color:whitesmoke;
             pointer-events: painted;
+            background-image: url(../images/logoGlow.png);
 
         }
+
+        li {
+            margin: 0;
+            padding: 0.2em;
+        }
     </style>
-<title>Jessies Search Engine</title>
+    <title>Jessies Search Engine</title>
 </head>
 
 <header>
@@ -119,10 +127,13 @@
 <body>
 
 
-        <ul style="color: aliceblue; list-style: none;" th:each="p : ${pages}">
-            <li style="color: aliceblue; font-size: 45px;" th:text="${p.name}"></li>
-            <li><a style="color: aliceblue; font-size: 30px;" href="#" th:href="@{${p.URL}}"> <h4 style="margin-left:20px;" th:text="${p.URL}" /> </a></li>
-        </ul>
+<ul style="color: aliceblue; list-style: none;" th:each="p : ${pages}">
+    <li style="color: aliceblue; font-size: 30px;" th:text="${p.name}"></li>
+    <li><a style=" color: aliceblue; font-size: 25px;" href="#" th:href="@{${p.URL}}"> <h4 style="margin-left:20px;" th:text="${p.URL}" /> </a></li>
+    <li th:text="${p.content}"></li>
+    <br>
+    <br>
+</ul>
 
 </body>
 </html>  
