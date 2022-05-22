@@ -112,15 +112,21 @@ public class PageController
 		//display array
 
 		List<Page> returnedPages = new LinkedList<Page>();
-		int i = PageResults.size()-1;
+		int i = 0;
 		for(PageResult PR : PageResults)
 		{
 			Page np = new Page();
 			np.setURL(PR.getURL().toString());
 			np.setName(PR.getTitle().toString());
+			int size = PR.getContent().toString().length();
+			if(size < 700)
+				np.setContent(PR.getContent().toString().substring(0,size));
+			else
+				np.setContent((PR.getContent().toString().substring(0,700)+"......"));
 			returnedPages.add(i,np);
-			i--;
+			i++;
 		}
+		Collections.reverse(returnedPages);
 
 
 		modelAndView.setViewName("display_results");
